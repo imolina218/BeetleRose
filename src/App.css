@@ -20,14 +20,12 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
   display: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 ul,
@@ -45,8 +43,9 @@ li {
 }
 
 .container {
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  max-width: max-content;
+
 }
 
 .hidden {

@@ -192,12 +192,12 @@ export const App = () => {
             position: cameraProperties[0][0]
           }}
         >
-          <UpdateObjects />
-          <Intersection />
-          <ambientLight />
-          <directionalLight position={[5, 5, 0]} intensity={0.2} />
-          <pointLight position={lightPosition} intensity={0.6} />
           <Suspense fallback={null}>
+            <UpdateObjects />
+            <Intersection />
+            <ambientLight />
+            <directionalLight position={[5, 5, 0]} intensity={0.2} />
+            <pointLight position={lightPosition} intensity={0.6} />
             <Ground />
             <BackGroundCircles />
             <Beetle
