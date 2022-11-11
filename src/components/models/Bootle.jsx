@@ -25,4 +25,3 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload("/models/Bootle.glb")
