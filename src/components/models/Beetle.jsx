@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei"
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF("/models/Beetle.glb")
+  const { nodes, materials } = useGLTF("/Models/Beetle.glb")
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={props.customPosScal.position} rotation={[0, Math.PI / 2, 0]} scale={props.customPosScal.scale}>
@@ -16,3 +16,5 @@ export default function Model({ ...props }) {
     </group>
   )
 }
+
+useGLTF.preload("/Models/Beetle.glb")

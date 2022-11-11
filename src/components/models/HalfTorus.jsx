@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei"
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF("/models/HalfTorus.glb")
+  const { nodes, materials } = useGLTF("/Models/HalfTorus.glb")
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Torus003.geometry} material={materials.HalfTorus} position={[0, 0, 1.4]} rotation={[Math.PI / 2, 0, 0]} />
@@ -11,4 +11,4 @@ export default function Model({ ...props }) {
   )
 }
 
-
+useGLTF.preload("/Models/HalfTorus.glb")

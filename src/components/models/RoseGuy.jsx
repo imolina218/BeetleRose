@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei"
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF("/models/RoseGuy.glb")
+  const { nodes, materials } = useGLTF("/Models/RoseGuy.glb")
   return (
     <group ref={group} {...props} dispose={null} position={props.customRoseGuyPosScal.position} scale={props.customRoseGuyPosScal.scale}>
       <group position={[0.07, 0.65, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]} scale={0.06}>
@@ -113,3 +113,4 @@ export default function Model({ ...props }) {
   )
 }
 
+useGLTF.preload("/Models/RoseGuy.glb")
