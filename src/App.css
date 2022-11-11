@@ -12,10 +12,6 @@
   --lightBlue: #61b8dc;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   font-family: "Zen Old Mincho", serif;
@@ -30,6 +26,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ul,
 li {
   margin: 0;
@@ -37,15 +37,15 @@ li {
 }
 
 .canvas {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   background: linear-gradient(0deg, rgba(51, 168, 224, 1) 50%, 
   rgba(180, 223, 239, 1) 100%);
   position: fixed;
 }
 
 .container {
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 
@@ -389,18 +389,6 @@ li {
     padding: 0 20vw;
   }
 }
-/* .company {
-
-} */
-/* .company span {
-  font-size: 5vw;
-} */
-/* .contact {
-
-} */
 .contact ul {
   list-style-type: none;
 }
-/* .about span {
-  font-size: 5vw;
-} */
