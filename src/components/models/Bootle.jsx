@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei"
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF("/models/Bootle.glb")
+  const { nodes, materials } = useGLTF("/Models/Bootle.glb")
   return (
     /* position={[2.67, 0.12, -0.21]} rotation={[0.25, 0, 1.57]} scale={0.46} */
     <group ref={group} {...props} dispose={null}>
@@ -25,3 +25,4 @@ export default function Model({ ...props }) {
   )
 }
 
+useGLTF.preload("/Models/Bootle.glb")
